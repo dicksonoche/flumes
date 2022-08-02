@@ -4,12 +4,8 @@ import { Grid } from '@material-ui/core'
 import Product from './Product/Product'
 import useStyles from './styles'
 
-const products = [
-    { id: 1, name: 'Shoes', description: 'Running shoes.', price: '$5', image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaIDkktu1Szi_uYcrRh_at5uvZE0tx3usruQ&usqp=CAU" },
-    { id: 2, name: 'Bag', description: 'DG Bags.', price: '$15', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScN0Y8nk6tWeb7W_VYWdPXJld3mER0x1QypQ&usqp=CAU' },
-];
 
-const Products = () => {
+const Products = ( {products} ) => {
     const classes = useStyles();
     return (
         <main className={classes.content}>
@@ -22,7 +18,7 @@ const Products = () => {
                 ))}
             </Grid>
         </main>
-    )
+    );
 }
 
 export default Products
