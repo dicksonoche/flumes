@@ -9,11 +9,14 @@ const Product = ({ product, onAddToCart }) => {
 
   const handleAddToCart = () => onAddToCart(product.id, 1);
 
+  console.log(product.image)
+
   return (
     <Card className={classes.root}>
-      <CardMedia className={classes.media} image={product.image} title={product.name} />
+      <CardMedia className={classes.media} image={product.image.file_size} title={product.name} />
       <CardContent>
         <div className={classes.cardContent}>
+          <img src={product.image} alt='product' />
           <Typography gutterBottom variant="h5" component="h2">
             {product.name}
           </Typography>
